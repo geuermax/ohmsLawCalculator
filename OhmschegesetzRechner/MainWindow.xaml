@@ -1,0 +1,44 @@
+﻿<Window x:Class="OhmschegesetzRechner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OhmschegesetzRechner"
+        mc:Ignorable="d"
+        Title="Omsche-Gesetz Rechner" Height="450" Width="690"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition Width="151*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Spannung :" Name="lblVoltage" HorizontalAlignment="Left" Margin="32,93,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" TextChanged="CheckInputs" Name="txtVoltage" Height="23" Margin="32,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Wiederstand :" Name="lblResistence" HorizontalAlignment="Left" Margin="32,155,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" TextChanged="CheckInputs" Name="txtResistence" Height="23" Margin="32,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Strom :" Name="lblCurrent" HorizontalAlignment="Left" Margin="32,216,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" TextChanged="CheckInputs" Name="txtCurrent" Height="23" Margin="32,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <!-- Errormessage -->
+        <Label Name="ErrorLabel" Visibility="Hidden" Content="Ein Feld muss leer bleiben." HorizontalAlignment="Left" Margin="32,319,0,0" VerticalAlignment="Top" Width="294" Foreground="Red" Height="48" />
+
+        <!-- Label for output -->
+        <Label Content="" x:Name="outVoltage" HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label Content="" x:Name="outResistence" HorizontalAlignment="Left" Margin="227,199,0,0" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
+        <Label Content="" x:Name="outCurrent" HorizontalAlignment="Left" Margin="56,16,0,0" VerticalAlignment="Top" Width="53" Grid.Column="1"/>
+
+        <!-- Help Button -->
+        <Button Content="?" Name="btnHelpVoltage" Click="btnHelpVoltage_Click" Background="Transparent" HorizontalAlignment="Left" Margin="127,94,0,0" VerticalAlignment="Top" Width="30" Height="23" BorderThickness="0" />
+        <Button Content="?" Name="btnHelpResistence" Click="btnHelpResistence_Click" Background="Transparent" HorizontalAlignment="Left" Margin="127,156,0,0" VerticalAlignment="Top" Width="30" Height="23" BorderThickness="0" />
+        <Button Content="?" Name="btnHelpCurrent" Click="btnHelpCurrent_Click" Background="Transparent" HorizontalAlignment="Left" Margin="127,217,0,0" VerticalAlignment="Top" Width="30" Height="23" BorderThickness="0" />
+
+
+
+
+        <Image HorizontalAlignment="Left" Source="/assets/circuit.png"  Height="320" Margin="331,47,0,0" VerticalAlignment="Top" Width="289" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>
