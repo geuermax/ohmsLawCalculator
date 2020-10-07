@@ -8,10 +8,7 @@
         Title="Omsche-Gesetz Rechner" Height="450" Width="690"
         ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="190*"/>
-            <ColumnDefinition Width="151*"/>
-        </Grid.ColumnDefinitions>
+
         <Label Content="Spannung :" Name="lblVoltage" HorizontalAlignment="Left" Margin="32,93,0,0" VerticalAlignment="Top" Width="95"/>
         <TextBox PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" TextChanged="CheckInputs" Name="txtVoltage" Height="23" Margin="32,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
@@ -25,9 +22,9 @@
         <Label Name="ErrorLabel" Visibility="Hidden" Content="Ein Feld muss leer bleiben." HorizontalAlignment="Left" Margin="32,319,0,0" VerticalAlignment="Top" Width="294" Foreground="Red" Height="48" />
 
         <!-- Label for output -->
-        <Label Content="" x:Name="outVoltage" HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="66"/>
-        <Label Content="" x:Name="outResistence" HorizontalAlignment="Left" Margin="227,199,0,0" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
-        <Label Content="" x:Name="outCurrent" HorizontalAlignment="Left" Margin="56,16,0,0" VerticalAlignment="Top" Width="53" Grid.Column="1"/>
+        <Label Content="" x:Name="outVoltage" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label Content="" x:Name="outResistence" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="610,199,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label Content="" x:Name="outCurrent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="432,21,0,0" VerticalAlignment="Top" Width="54" />
 
         <!-- Help Button -->
         <Button Content="?" Name="btnHelpVoltage" Click="btnHelpVoltage_Click" Background="Transparent" HorizontalAlignment="Left" Margin="127,94,0,0" VerticalAlignment="Top" Width="30" Height="23" BorderThickness="0" />
