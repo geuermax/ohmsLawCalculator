@@ -61,9 +61,9 @@ namespace OhmschegesetzRechner
 
                 if (voltageIsMissing || currentIsMussing || resistenceIsMissing)
                 {
-                    double voltage = -1;
-                    double resistence = -1;
-                    double current = -1;
+                    double voltage = 0;
+                    double resistence = 0;
+                    double current = 0;
 
                     try
                     {
