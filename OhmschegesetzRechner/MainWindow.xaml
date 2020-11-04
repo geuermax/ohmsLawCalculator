@@ -19,12 +19,13 @@
         <TextBox PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" TextChanged="CheckInputs" Name="txtCurrent" Height="23" Margin="32,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
         <!-- Errormessage -->
-        <Label Name="ErrorLabel" Visibility="Hidden" Content="Ein Feld muss leer bleiben." HorizontalAlignment="Left" Margin="32,319,0,0" VerticalAlignment="Top" Width="294" Foreground="Red" Height="48" />
+        <Label Name="ErrorLabel" Visibility="Hidden" Content="Ein Feld muss leer bleiben." HorizontalAlignment="Left" Margin="32,337,0,0" VerticalAlignment="Top" Width="294" Foreground="Red" Height="30" />
 
         <!-- Label for output -->
         <Label Content="" x:Name="outVoltage" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="66"/>
         <Label Content="" x:Name="outResistence" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="610,199,0,0" VerticalAlignment="Top" Width="64"/>
         <Label Content="" x:Name="outCurrent" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="432,21,0,0" VerticalAlignment="Top" Width="54" />
+        <Label Content="" x:Name="outPower" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="610,230,0,0" VerticalAlignment="Top" Width="64" />
 
         <!-- Help Button -->
         <Button Content="?" Name="btnHelpVoltage" Click="btnHelpVoltage_Click" Background="Transparent" HorizontalAlignment="Left" Margin="127,94,0,0" VerticalAlignment="Top" Width="30" Height="23" BorderThickness="0" />
@@ -33,8 +34,11 @@
 
 
 
-
         <Image HorizontalAlignment="Left" Source="/assets/circuit.png"  Height="320" Margin="331,47,0,0" VerticalAlignment="Top" Width="289" Grid.ColumnSpan="2"/>
+
+        <Label Content="Leistung :" x:Name="lblPower" HorizontalAlignment="Left" Margin="32,277,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" TextChanged="CheckInputs" x:Name="txtPower" Height="23" Margin="32,302,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="?" x:Name="btnHelpPower" Click="btnHelpPower_Click" Background="Transparent" HorizontalAlignment="Left" Margin="127,277,0,0" VerticalAlignment="Top" Width="30" Height="23" BorderThickness="0" />
 
 
     </Grid>
